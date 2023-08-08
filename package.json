@@ -1,0 +1,34 @@
+{
+  "name": "reactpractice",
+  "version": "1.0.0",
+  "description": "this is a  react project from scratch",
+
+  "scripts": {
+    "start":"parcel index.html",
+    "build":"parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abnightfury/reactPractice.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Abhishek Roy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abnightfury/reactPractice/issues"
+  },
+  "homepage": "https://github.com/abnightfury/reactPractice#readme",
+  "devDependencies": {
+    "parcel": "^2.9.3"
+  },
+  "dependencies": {
+    "react": "^18.2.0"
+  },
+  "browserslist":[
+   "last 2  version"
+   
+  ]
+}
