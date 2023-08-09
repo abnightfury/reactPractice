@@ -60,3 +60,12 @@ h3,h4,h5,h6{
     height: 200px;
     overflow: hidden;
 }
+.filter-btn{
+    padding: 5px;
+    margin: 10px;
+    background-color: #f30;
+    color: #fff;
+    border: 0px;
+    cursor: pointer;
+
+}
