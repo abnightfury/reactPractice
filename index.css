@@ -18,7 +18,7 @@ h3,h4,h5,h6{
     margin: auto;
 }
 .nav-items {
-    width: 30%;
+    width: 38%;
     /* text-align: center; */
 }
 .nav-items>ul{
@@ -30,6 +30,9 @@ h3,h4,h5,h6{
     padding: 10px;
     list-style: none;
     font-size: 18px;
+}
+.filter{
+    display: flex;
 }
 .restro-container {
     display: flex;
@@ -68,4 +71,28 @@ h3,h4,h5,h6{
     border: 0px;
     cursor: pointer;
 
+}
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+.shimmer-card{
+    box-shadow: 0px 0px 13px 1px rgba(0,0,0,0.5);
+    width: 200px;
+    height: 300px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    word-wrap: break-word;
+}
+.btnlog{
+    padding: 0px 20px;
+    color: #fff;
+    background: #F30;
+    border: 0;
+    cursor: pointer;
 }

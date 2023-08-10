@@ -1,6 +1,7 @@
 import logofood2 from "../../img/logofood.png"
- 
+import { useState } from "react" 
  const Header =()=>{
+    const [btnName, setBtnName]=useState("Login")
     return(
         <div className="header">
             <div className="logo-container">
@@ -12,6 +13,7 @@ import logofood2 from "../../img/logofood.png"
                     <li>About</li>
                     <li>Contact Us</li>
                     <li>Cart</li>
+                    <button className="btnlog" onClick={()=>btnName.toLowerCase()==="login"?setBtnName("Logout"):setBtnName("Login")}>{btnName}</button>
                 </ul>
 
             </div>
