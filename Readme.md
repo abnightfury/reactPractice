@@ -1,4 +1,4 @@
-# React Project 🚀
+# React Project overview
 
 
 # Parcel
@@ -22,7 +22,7 @@
 
 
 
-# Namaste Food
+# React Food App
 
 
 /**
