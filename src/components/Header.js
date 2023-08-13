@@ -14,6 +14,7 @@ import { Link } from "react-router-dom";
                     <li><Link to ="/"> Home</Link> </li>
                     <li><Link to ="/about">About</Link></li>
                     <li><Link to ="/contact">Contact Us</Link></li>
+                    <li><Link to ="/grocery">Grocery</Link></li>
                     <li>Cart</li>
                     <button className="btnlog" onClick={()=>btnName.toLowerCase()==="login"?setBtnName("Logout"):setBtnName("Login")}>{btnName}</button>
                 </ul>

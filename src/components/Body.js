@@ -3,6 +3,7 @@ import restaurantList from "../utils/mockData";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
   const [restaurantLists, setRestaurantLists] = useState([]);
@@ -31,6 +32,10 @@ const Body = () => {
     //console.log(filteredRestaurants)
     setFilteredRestaurant(filteredRestaurants);
   };
+  const onlineStatus= useOnlineStatus();
+  if(onlineStatus===false) return <h1>Looks like you're offline, Please Check your internet</h1>
+
+
   return restaurantLists.length === 0 ? (
     <Shimmer />
   ) : (
@@ -51,8 +56,8 @@ const Body = () => {
         <button
           className="filter-btn"
           onClick={() => {
-            setRestaurantLists(
-              restaurantLists.filter((a) => a.info.avgRating >= 4.3)
+            setFilteredRestaurant(
+              filteredRestaurant.filter((a) => a.info.avgRating >= 4.3)
             );
           }}
         >
