@@ -5,14 +5,16 @@ const styleCard = {
 }
 const RestaurantCard =(props)=>{
     const {resData}= props
-    const { cloudinaryImageId,name, avgRating, cuisines, costForTwo, deliveryTime}= resData // optional chaining 
+    console.log(resData)
+    const { cloudinaryImageId,name, avgRating, cuisines, costForTwo}= resData
+    const{deliveryTime}=resData?.sla // optional chaining 
     return(
-        <div className="res-card" style={styleCard}>
-            <div className="res-card-pic">
-                <img src={CDN_URL+ cloudinaryImageId}/>
+        <div className=" m-[10px] p-[5px]  w-[224px] text-center break-words bg-gray-100 hover:bg-gray-200  shadow-lg border border-solid border-gray-200 rounded-md" >
+            <div className="res-card-pic w-[100%]  h-52 overflow-hidden rounded-md">
+                <img className="  w-[100%]" src={CDN_URL+ cloudinaryImageId}/>
             </div>
-            <h3>{name}</h3>
-            <h4>{cuisines.join(',')}</h4>
+            <h3 className=" text-blue-600 hover:text-red-700  text-{14px} font-bold">{name}</h3>
+            <h4 className="text-sm">{cuisines.join(',')}</h4>
             <h4>{costForTwo}</h4>
             <h5>{avgRating} Stars</h5>
             <h6>{deliveryTime} Mins</h6>
