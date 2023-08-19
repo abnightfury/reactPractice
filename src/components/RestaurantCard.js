@@ -21,4 +21,19 @@ const RestaurantCard =(props)=>{
         </div>
     )
 }
+
+// enhanced restaurant card (HOC)
+export const withBadges =(RestaurantCard)=>{
+    return (props)=>{
+        console.log(props, "enhanced")
+        const{description} = props.resData.badges.imageBadges[0]
+        return(
+            <div>
+                <lable className="absolute m-1 p-1 bg-black text-white">{description}</lable>
+                <RestaurantCard {...props}/>
+            </div>
+        )
+    }
+}
+
 export default RestaurantCard;

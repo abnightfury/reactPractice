@@ -1,3 +1,4 @@
+import UserContext from "../utils/UserContext";
 import User from "./User"
 import UserClass from "./UserClass"
 import React, { Component } from 'react'
@@ -15,6 +16,14 @@ export default class About extends Component {
     return (
       <div>
         <h1>About class</h1>
+        <div>
+          LoggedInUser
+        <UserContext.Consumer>
+          {({loggedInUser})=>{
+            return<h1 className="text-blue-600">{loggedInUser}</h1>
+          }}
+        </UserContext.Consumer>
+        </div>
         <UserClass />
       </div>
     )

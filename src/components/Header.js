@@ -1,9 +1,16 @@
 import logofood2 from "../../img/logofood.png";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 const Header = () => {
   const [btnName, setBtnName] = useState("Login");
-
+  const loggedUser = useContext(UserContext);
+  const { loggedInUser } = loggedUser;
+  //console.log(loggedInUser, "loggedUser")
+  //subscribing to the store
+  const cartItems = useSelector((store) => store.cart.items);
+  console.log(cartItems, "store");
   return (
     <div className="p-1 shadow-lg ">
       <div className="m-3 flex justify-between">
@@ -24,7 +31,9 @@ const Header = () => {
             <li className="p-4 hover:text-red-600">
               <Link to="/grocery">Grocery</Link>
             </li>
-            <li className="p-4 hover:text-red-600">Cart</li>
+            <li className="p-4 hover:text-red-600">
+              <Link to="/cart">Cart-({cartItems.length}) items </Link>
+            </li>
             <button
               className="rounded-full pr-10 pl-10 pt-0 pb-0 hover:bg-red-900 h-11 shadow-sm bg-red-500 text-white"
               onClick={() =>
@@ -35,6 +44,7 @@ const Header = () => {
             >
               {btnName}
             </button>
+            <li className="p-4">{loggedInUser}</li>
           </ul>
         </div>
       </div>
