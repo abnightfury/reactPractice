@@ -12,6 +12,7 @@ const RestaurantItemList = ({ items }) => {
     <div>
       {items.map((item) => (
         <div
+          data-testid="fooditems"
           className="font-normal  text-left m-2 ml-3 mb-3 border-b-2 flex justify-between"
           key={item.card.info.id}
         >

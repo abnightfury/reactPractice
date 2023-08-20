@@ -18,7 +18,7 @@ const Body = () => {
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING"
     );
     const json = await data.json();
-    console.log(json);
+    console.log(json, "jsondata");
     setRestaurantLists(
       json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
@@ -48,7 +48,7 @@ const Body = () => {
           <input
             type="text"
             className="border border-solid border-gray-500 mr-2  rounded-md w-64 p-2"
-            placeholder="Search Restaurants"
+            placeholder="Search UserName"
             value={loggedInUser}
             onChange={(e) => {
               setUserInfo(e.target.value);

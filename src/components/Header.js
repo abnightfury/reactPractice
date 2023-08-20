@@ -15,7 +15,7 @@ const Header = () => {
     <div className="p-1 shadow-lg ">
       <div className="m-3 flex justify-between">
         <div className="logo-container">
-          <img className="w-24" src={logofood2} />
+          <img className="w-24" src={logofood2} alt="Logo"/>
         </div>
         <div className="nav-items ">
           <ul className="flex p-4 m-5 items-baseline m-0 p-0">

@@ -5,11 +5,11 @@ const styleCard = {
 }
 const RestaurantCard =(props)=>{
     const {resData}= props
-    console.log(resData)
+    //console.log(resData, "resdata")
     const { cloudinaryImageId,name, avgRating, cuisines, costForTwo}= resData
     const{deliveryTime}=resData?.sla // optional chaining 
     return(
-        <div className=" m-[10px] p-[5px]  w-[224px] text-center break-words bg-gray-100 hover:bg-gray-200  shadow-lg border border-solid border-gray-200 rounded-md" >
+        <div data-testid="rescard" className=" m-[10px] p-[5px]  w-[224px] text-center break-words bg-gray-100 hover:bg-gray-200  shadow-lg border border-solid border-gray-200 rounded-md" >
             <div className="res-card-pic w-[100%]  h-52 overflow-hidden rounded-md">
                 <img className="  w-[100%]" src={CDN_URL+ cloudinaryImageId}/>
             </div>
@@ -29,7 +29,7 @@ export const withBadges =(RestaurantCard)=>{
         const{description} = props.resData.badges.imageBadges[0]
         return(
             <div>
-                <lable className="absolute m-1 p-1 bg-black text-white">{description}</lable>
+                <label className="absolute m-1 p-1 bg-black text-white">{description}</label>
                 <RestaurantCard {...props}/>
             </div>
         )
